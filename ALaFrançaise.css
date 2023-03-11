@@ -1,0 +1,331 @@
+*{
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    list-style: none;
+    text-decoration: none;
+}
+
+            /*!!!LINK EN NOIR!!!!*/
+a{
+    color: black;
+}
+
+            /*!!!!!HEADER!!!!*/
+.header__logo{
+    display: flex;
+    justify-content: center;
+    margin-top:1em;
+}
+
+.header__logo__element{
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.header__logo__element .arrow{
+    font-size: 1.8em;
+}
+
+.header__background__img{
+    height: 20em;
+    width: 100%;
+    object-fit: cover;
+}
+
+
+            /*effet "encastré" du main dans le headerbckimg*/
+main{
+    position: relative;
+    background-color: white;
+    border-radius: 20px 20px 0 0;
+    transform: translateY(-4em);
+}
+
+            /*!!!!!HEADER MENU/MAIN!!!!!!*/
+.bigheader__element{
+    margin: 2em 2em;
+    padding-top: 2em;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bigheader__element h1{
+    font-family:'Shrikhand', cursive;
+}
+
+            /*!!!!!!BUTTON LIKE HOVER!!!!!!*/
+.bigheader__btn{
+    font-size: 2em;
+}
+.empty{
+    position: absolute;
+}
+
+.full{
+    transition: 0.8s;
+    opacity: 0;
+    position: relative;
+}
+
+.bigheader__btn:hover .full{
+    transform: scale(1.5);
+    opacity: 1;
+    color: #9356DC;
+}
+
+
+            /*!!!!!MENU!!!!!*/
+.menu{
+    display: flex;
+    justify-content: space-around;
+    margin: 2em 0;
+}
+
+.carte__title__underline{
+    height: 0.26em;
+    background-color: #99e2d0;
+    width: 12%;
+}
+
+.menu__carte__element{
+    margin-top: 1em;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em;
+}
+
+.menu__carte__element.one{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.4s;
+}
+.menu__carte__element.two{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.8s;
+}.menu__carte__element.three{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 1.2s;
+}
+@keyframes popup {
+    0% {
+        transform: translateY(-5em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+            /*!!!!!CARTES DESCRIPTIVES!!!!!*/
+.card{
+    box-shadow:4px 5px 10px lightgrey;
+    border-radius: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    width: 24em;
+}
+
+.card__description{
+    padding: 0.8em 0.8em;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__description h4{
+    font-size: larger;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.card__description__element{
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__description__element__composant{
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.card__description__element__price{
+    font-weight: bold;
+}
+
+            /*!!!!CARD CHECK AND CARDCHECK ANIMATION!!!!!*/
+.card__check{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #99e2d0;
+    width: 5em;
+    margin-right: -5em;
+    transition: 0.7s;
+}
+
+
+:hover.card .card__check{
+    margin-right: 0;
+}
+
+
+.card__check i{
+    color: white;
+    font-size: 1.8em;
+    transition: 0.5s;
+    transform: rotate(720deg);
+}
+
+:hover.card .card__check i{
+    transform: none;
+}
+
+            /*!!!!!BUTTON!!!!!*/
+.menu__btn{
+    margin: 0em auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+}
+            
+.menu__button{
+    color: white;
+    font-size: 1.4em;
+    font-weight: bold;
+    padding: 0.5em 0.8em;
+    text-align: center;
+    border-radius: 30px;
+    background:linear-gradient(355deg, #9356DC, #FF79DA);
+    box-shadow: 0.25rem 0.25rem 10px rgb(0 0 0 / 25%);
+    cursor: pointer;
+    transition: .6s;
+}
+            
+.menu__button:hover{
+    transform: scale(1.1);
+}
+
+            /*!!!!!FOOTER!!!!!*/
+.footer{
+    width: 100%;
+    height: 15em;
+    background-color: #354146;
+}
+
+.footer__element{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color:white;
+}
+
+.footer__element__title{
+    font-family: 'Shrikhand', cursive;
+    margin-top: 1em;
+}
+
+.footer__ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer__li{
+    margin: 10px;
+}
+
+
+            /*!!!!!MEDIAQUERIE!!!!!*/
+
+@media screen and (max-width:1160px) {
+
+    .header__logo img{
+        height: 2.5em;
+        object-fit: cover;
+    }
+    
+    .header__logo__element{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+.header__background__img{
+    height: 15em;
+    width: 100%;
+    object-fit: cover;
+}
+
+.bigheader{
+    margin: 0;
+}
+
+    
+.menu{
+    display: block;
+    margin: 1em ;
+}
+
+.carte__title__underline{
+    height: 0.26em;
+    background-color: #99e2d0;
+    width: 8%;
+}
+
+.menu__carte{
+    margin: 3em 0em;
+}
+
+.menu__carte__element{
+    margin: 1em 0em;
+}
+.card{
+    width: 100%;
+}
+
+.menu__carte__element.one{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.4s;
+}
+.menu__carte__element.two{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 0.8s;
+}.menu__carte__element.three{
+    animation-name: popup;
+    animation-duration: 2s;
+    animation-fill-mode: backwards;
+    animation-delay: 1.2s;
+}
+@keyframes popup {
+    0% {
+        transform: translateY(-5em);
+        opacity: 0;
+    }
+    100%{
+        transform: translateY(0);
+        opacity: 1;
+    }
+    
+}
+
+}
