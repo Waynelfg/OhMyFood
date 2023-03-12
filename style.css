@@ -80,7 +80,7 @@ a{
     transition: 0.6s;
 }
 
-.explorer__element__btn:hover{
+.explorer__element__btn:hover .explorer__element__btn:active{
     transform: scale(1.1);
 }
 
@@ -406,7 +406,7 @@ a{
     font-size: 1.4em;
 }
 
-.card__caption__like:hover .full{
+.card__caption__like:hover .card__caption__like:active .full{
     transform: scale(1.5);
     opacity: 1;
     color: #9356DC;

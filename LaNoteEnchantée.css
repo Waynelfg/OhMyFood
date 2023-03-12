@@ -12,18 +12,18 @@ a{
 
             /*!!!!!HEADER!!!!*/
 .header__logo{
-    display: flex;
-    justify-content: center;
     margin-top:1em;
 }
-
+            
 .header__logo__element{
+    margin: 0;
     display: flex;
+    width: 67%;
     align-items: center;
-    gap: 10%;
+    justify-content: space-between;
 }
-
 .header__logo__element .arrow{
+    margin-left: 1em;
     font-size: 1.8em;
 }
 
@@ -263,6 +263,8 @@ main{
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-left: 10%;
+        gap: 10%;
     }
 
     .header__background__img{
